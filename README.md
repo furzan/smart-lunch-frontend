@@ -1,61 +1,41 @@
-# .
+# Smart Lunch Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue.js application for managing lunch contributions and voting in office environments.
 
-## Recommended IDE Setup
+## Getting Started
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+1. Install dependencies:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+2. Create `.env` file:
+```env
+VITE_URL=your-backend-api-url
+```
 
-```sh
+3. Start development server:
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Available Scripts
 
-```sh
-npm run build
-```
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run test:unit` - Run unit tests
+- `npm run test:e2e` - Run e2e tests
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Lunch Flow
 
-```sh
-npm run test:unit
-```
+1. **Contribution Phase** (11:00 AM - 12:00 PM): Join lunch and make payments
+2. **Voting Phase** (12:00 PM - 12:30 PM): Vote for dishes
+3. **Results Phase** (After 12:30 PM): View voting results
 
-### Run End-to-End Tests with [Nightwatch](https://nightwatchjs.org/)
+## User Roles
 
-```sh
-# When using CI, the project must be built first.
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chrome
-npm run test:e2e -- --env chrome
-# Runs the tests of a specific file
-npm run test:e2e -- tests/e2e/example.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-    
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- **Admin**: Full system access
+- **Employee**: Can contribute and vote
+- **Collector**: Lunch collection management
